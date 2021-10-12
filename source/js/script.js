@@ -1,41 +1,47 @@
+// Variables/Constants
+const popupSuccess = document.querySelector('.popup--success')
+const buttonSend = document.querySelector('.review__button')
+const popupCloseSuccess = document.querySelector('.popup__close--success')
+const popupFailure = document.querySelector('.popup--failure')
+const buttonCloseFailure = document.querySelector('.button--close-failure')
+const review = document.querySelector('.review')
+const reviewName = review.querySelector('[name=user-name]')
+const reviewSurname = review.querySelector('[name=user-surname]')
+const reviewPatronymic = review.querySelector('[name=patronymic]')
+const userTel = review.querySelector('[name=user-tel]')
+const userMail = review.querySelector('[name=user-mail]')
+const message = review.querySelector('[name=message]')
+const empty = ''
 
-
-//Переменные для окна отправки формы
-
-var popupSuccess = document.querySelector(".popup--success");
-var buttonSend = document.querySelector(".review__button");
-var closeSuccess = document.querySelector(".popup__close--success");
-var popupFailure = document.querySelector(".popup--failure");
-var closeFailure = document.querySelector(".button--close-failure");
-var review = document.querySelector(".review");
-var reviewName = review.querySelector("[name=user-name]");
-var reviewSurname = review.querySelector("[name=user-surname]");
-var reviewPatronymic = review.querySelector("[name=patronymic]");
-var userTel = review.querySelector("[name=user-tel]");
-var userMail = review.querySelector("[name=user-mail]");
-var message = review.querySelector("[name=message]");
-var empty = "";
-
-
-//Вызов всплывающих окошек
-
-buttonSend.addEventListener("click", function(evt) {
-  if (reviewName.value === empty || reviewSurname.value === empty || reviewPatronymic.value === empty || userTel.value === empty || userMail.value === empty || message.value === empty) {
-    evt.preventDefault();
-    popupFailure.classList.add("modal-show");
+// Event functions
+const buttonSendClickEvent = (e) => {
+  if (
+    reviewName.value === empty ||
+    reviewSurname.value === empty ||
+    reviewPatronymic.value === empty ||
+    userTel.value === empty ||
+    userMail.value === empty ||
+    message.value === empty)
+  {
+    e.preventDefault()
+    popupFailure.classList.add('modal-show')
   }
+}
 
-});
+const popupCloseSuccessEvent = (e) => {
+  e.preventDefault()
+  popupSuccess.classList.remove('modal-show')
+}
 
-closeSuccess.addEventListener("click", function(evt){
-  evt.preventDefault();
-  popupSuccess.classList.remove("modal-show");
-});
+const buttonCloseFailureEvent = (e) => {
+  e.preventDefault()
+  popupFailure.classList.remove('modal-show')
+}
 
-closeFailure.addEventListener("click", function(evt){
-  evt.preventDefault();
-  popupFailure.classList.remove("modal-show");
-});
+// Events
+buttonSend.addEventListener('click', buttonSendClickEvent)
+popupCloseSuccess.addEventListener('click', popupCloseSuccessEvent)
+buttonCloseFailure.addEventListener('click', buttonCloseFailureEvent)
 
 
 
