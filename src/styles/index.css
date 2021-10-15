@@ -1,0 +1,33 @@
+html,
+body {
+  margin: 0;
+}
+html {
+  height: 100%;
+}
+html,
+body {
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  font-family: 'Euclid Circular A', sans-serif;
+  color: #333333;
+  font-size: 15px;
+  font-variant: tabular-nums;
+  line-height: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
