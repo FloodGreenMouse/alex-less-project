@@ -5,6 +5,9 @@
   "author": "Alex",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "start": "gulp"
+  },
   "dependencies": {
     "gulp": "^4.0.2"
   },
