@@ -1,0 +1,14 @@
+{
+  "name": "alex-gulp-project",
+  "version": "0.0.1",
+  "description": "Test gulp project",
+  "author": "Alex",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.5"
+  }
+}
