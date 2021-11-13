@@ -1,3 +1,135 @@
-include components/head
-body
-  include components/header
+doctype html
+html(lang='ru')
+  include components/head.pug
+  body
+    div.desktop-wrapper
+      div.desktop-wrapper-container
+        include components/header.pug
+
+        main.page-main.main-index
+          h1.visually-hidden Добро пожаловать в Седону!
+          div.page-main__wrapper-intro
+            div.page-main__text
+              img.container.page-main__text-index(src='img/text-index.svg' width='282' height='214' alt='Добро пожаловать в Седону!')
+            picture.page-main__triangle
+              source(media='(min-width: 1200px)' srcset='img/intro-triangle--desktop.svg')
+              source(media='(min-width: 768px)' srcset='img/intro-triangle-tablet.svg')
+              img.page-main__triangle-image(src='img/intro-triangle.svg')
+
+          header.page-main__header.header
+            div.container.page-main__header-wrapper
+              b.page-main__heading Седона - небольшой городок в Аризоне, #[br] заслуживающий большего!
+              p.page-main__text-basic Рассмотрим 5 причин, по которым Седона круче, чем гранд-каньон!
+
+
+          section.features
+            h2.visually-hidden Преимущества Седоны
+            div.features--blue.features--first
+              div.white-triangle-features.white-triangle--index
+                img.feature__triangle(src='img/white-triangle.svg' width='320' height='37')
+            
+              div.features__first-info
+                div.container.features__description--first
+                  h3.features__title.features__title-main.features__title-main--first Настоящий городок
+                  p.features__number.features__number-first &ndash; №1 &ndash;
+                  p.features__text.features__text-first.features__text-first--mobile Седона не аттракцион для туристов, #[br] там течет своя жизнь
+                  p.features__text.features__text-first.features__text-first--tablet Седона не аттракцион #[br] для туристов, #[br] там течет своя жизнь
+
+              div.features__wrapper-image
+                picture.features__picture
+                  source(media='(min-width: 1200px)' srcset='img/photo-city@1x.jpg 1x, img/photo-city-desktop@2x.jpg 2x')
+                  source(media='(min-width: 768px)' srcset='img/photo-city-tablet.jpg 1x, img/photo-city-tablet@2x.jpg 2x')
+                  img.features__image(src='img/photo-city.jpg' alt='Изображение Седоны')
+          
+          
+            div.features__list
+              ul.container.advices
+                li.advices__item.advices__item--house
+                  div.advices__item-wrapper
+                    picture.advices__picture
+                      source(media='(min-width: 768px)' srcset='mg/icon-house-tablet.svg')
+                      img.advices__item-icon.advices__item-icon--house(src='img/icon-house.svg' alt='Иконка дома')
+                    b.advices__title.advices__title--house Жилье
+
+                  p.advices__text.advices__text--mobile.advices__text--house Рекомендуем пожить в настоящем мотеле, все как в кино!
+                  p.advices__text.advices__text--tablet.advices__text--house Рекомендуем пожить #[br] в настоящем мотеле, #[br] все как в кино!
+
+                li.advices__item.advices__item--gift
+                  div.advices__item-wrapper
+                    picture.advices__picture
+                      source(media='(min-width: 768px)' srcset='img/icon-gift-tablet.svg')
+                      img.advices__item-icon.advices__item-icon--gift(src='img/icon-gift.svg' alt='Иконка подарка' width='32' height='38')
+                    b.advices__title.advices__title--gift Сувениры
+                  p.advices__text.advices__text--mobile.advices__text--gift Не только китайского, но и местного производства!
+                  p.advices__text.advices__text--tablet.advices__text--gift Не только китайского, #[br] но и местного #[br] производства!
+
+                li.advices__item.advices__item--food
+                  div.advices__item-wrapper
+                    picture.advices__picture
+                      source(media='(min-width: 768px)' srcset='img/icon-burger-tablet.svg')
+                      img.advices__item-icon.advices__item-icon--burger(src='img/icon-burger.svg' alt='Иконка бургера')
+                    b.advices__title.advices__title--food Еда
+                  p.advices__text.advices__text--mobile.advices__text--food Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                  p.advices__text.advices__text--tablet.advices__text--food Всегда заказывайте #[br] фирменный бургер, #[br] вы не разочаруетесь!
+            
+            div.features__second-info
+
+              div.features__description.features__description-second.features--blue
+                div.container.features__second-wrapper
+                  h3.features__title.features__title-main.features__title-main--second Там есть мост дьявола
+                  p.features__number.features__number-second &ndash; №2 &ndash;
+                  p.features__text.feature__text--second-mobile.feature__text--second Да, по нему можно пройти! Если вы #[br] осмелитесь, конечно
+                  p.features__text.feature__text--second-tablet.feature__text--second Да, по нему можно #[br] пройти! Если вы #[br] осмелитесь, конечно
+
+              div.features__wrapper-image.features__image-bridge
+                picture.advices__picture
+                source(media='(min-width: 1200px)' srcset='img/photo-bridge@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x')
+                source(media='(min-width: 768px)' srcset='img/photo-bridge-tablet.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x')
+                img.features__image(src='img/photo-bridge.jpg' alt='Мост дьявола')
+          
+            div.features__additional.features-additional
+              div.container.features__additional-wrapper
+
+                div.features-additional__item
+                  h3.features__title.features__additional-mobile.features__additional-title--first Небольшая площадь
+                  h3.features__title.features-additional__title.features__additional-tablet.features__additional-title--first Небольшая #[br] площадь
+                  p.features__number.features__additional-number &ndash; №3 &ndash;
+                  p.features__text.features__additional-mobile.features__additional-text Все интересные места находятся очень близко
+                  p.features__text.features__additional-tablet.features__additional-text Все интересные места #[br] находятся очень#[br]  близко
+                
+                div.main-index__line-wrapper.line
+                  hr.line__horizon.line-features.line-features--first
+              
+                div.features-additional__item
+                  h3.features__title.features__additional-mobile.features__title--four Красивая дорога
+                  h3.features__title.features-additional__title.features__additional-tablet.features__title--four Красивая #[br] дорога
+                  p.features__number.features__additional-number &ndash; №4 &ndash;
+                  p.features__text.features__additional-mobile.features__additional-text Ехать в Седону из Лас-Вегаса совсем не скучно!
+                  p.features__text.features__additional-tablet.features__additional-text Ехать в Седону из #[br] Лас-Вегаса совсем #[br] не скучно!
+              
+                div.main-index__line-wrapper.line
+                  hr.line__horizon.line-features.line-features--second
+              
+                div.features-additional__item
+                  h3.features__title.features__additional-mobile.features__title--five Мало туристов
+                  h3.features__title.features-additional__title.features__additional-tablet.features__title--five Мало #[br] туристов
+                  p.features__number.features__additional-number &ndash; №5 &ndash;
+                  p.features__text.features__additional-mobile.features__additional-text Большинство едет в Гранд Каньон и толпится там
+                  p.features__text.features__additional-tablet.features__additional-text Большинство едет в #[br] Гранд Каньон и #[br] толпится там
+          
+          section.search-hotel
+            h2.visually-hidden Форма поиска гостиницы
+
+            div.container.search-hotel__wrapper
+              h3.search-hotel__title.search-hotel__title-index Заинтересовались?
+              p.search-hotel__text.search-hotel__text-mobile Укажите предполагаемые даты #[br] поездки, и мы покажем вам лучшие #[br] предложения гостиниц в седоне
+              p.search-hotel__text.search-hotel__text-tablet Укажите предполагаемые даты поездки,#[br] и мы покажем вам лучшие предложения гостиниц в седоне
+              button.button.button--blue.search-hotel__button Найти гостиницу
+
+          section.map.page-main__map
+            h2.visually-hidden Карта
+            script(type='text/javascript' charset='utf-8' async src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A698f365aca19b83c818d70c9c556a57a6d6971e5b57a45ac96f58843e7f28a18&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=true')
+      
+        include components/footer.pug
+      
+      script(src='js/menu.js')
